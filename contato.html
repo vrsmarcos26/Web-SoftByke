@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTBYKE - Loja de Bicicletas e Acessórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="img/logo-word-removebg-preview.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <b><a href="index.html">HOME</a></b>
+            <b><a href="sobre.html">SOBRE</a></b>
+            <b><a href="blog.html">BLOG</a></b>
+            <b><a href="produtos.html">PRODUTOS</a></b>
+            <b><a href="contato.html">CONTATO</a></b>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/face-logo2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/instagram-logo2-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </header>
+
+    <br><br>
+    <!-- Seção de Contato -->
+    <section class="contato">
+        <h1>Entre em Contato</h1>
+        <p>Se você tem alguma dúvida ou deseja saber mais sobre nossos produtos, preencha o formulário abaixo!</p>
+
+        <!-- Formulário de Contato -->
+        <form action="enviar.php" method="POST">
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="campo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <div class="campo">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Informações de Contato -->
+        <div class="informacoes">
+            <h2>Informações de Contato</h2>
+            <p><strong>Endereço:</strong> Rua Exemplo, 123 - Bairro, Cidade, Estado</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>E-mail:</strong> contato@softbyke.com.br</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <hr class="divider">
+        <p>2025 SoftByke - Loja de Bicicletas e Acessórios. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

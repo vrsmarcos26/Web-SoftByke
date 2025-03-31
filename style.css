@@ -1,0 +1,857 @@
+/* Estilo específico para a página inicial */
+.home header {
+    background-color: rgba(51, 51, 51, 0);  /* Fundo transparente */
+    transition: background-color 0.3s ease;  /* Transição suave para o fundo */
+}
+
+/* Quando o mouse passa sobre o cabeçalho na home */
+.home header:hover {
+    background-color: #162d47;  /* Fundo com cor quando o mouse passa */
+}
+
+.hom header:hover {
+    background-color: #162d47; /* Fundo Home pg */
+}
+
+/* Estilo geral do cabeçalho */
+header {
+    display: flex;  /* Flexbox para organizar os elementos */
+    align-items: center;  /* Alinha os itens verticalmente ao centro */
+    padding: 10px;
+    width: 99%;  /* Garantir que o cabeçalho ocupe toda a largura da tela */
+    position: fixed;  /* Deixa o cabeçalho fixo no topo */
+    top: 0;  /* Fixa no topo */
+    left: 0;  /* Alinha à esquerda */
+    background-color: #162d47;  /* Cor de fundo do cabeçalho */
+    color: #fff;
+    z-index: 1000; /*Fica na frente da imagem */
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Estilo para a logo */
+header .logo img {
+    height: 40px;  /* Tamanho da logo */
+}
+
+/* Estilo para os links de navegação */
+.nav-links {
+    display: flex;  /* Alinha os links em linha */
+    justify-content: center;  /* Centraliza os links */
+    flex-grow: 1;  /* Garante que os links ocupem o máximo de espaço disponível */
+}
+
+.nav-links a {
+    color: #fff;  /* Cor do texto */
+    text-decoration: none;  /* Remove o sublinhado */
+    margin: 20px;  /* Espaço entre os links */
+    font-size: 20px; /*Tamanho da fonte */
+    position: relative;
+    z-index: 2;  /* Garante que os links fiquem acima de outros elementos */
+}
+
+.social-icons img {
+    width: 30px;  /* Tamanho dos ícones */
+    height: 30px; /* Altura */
+    transition: transform 0.3s ease;  /* Transição para o efeito de hover */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);  /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+/* Background do texto inicial */
+/* Define a altura e o estilo da seção com a imagem de fundo */
+.inicio {
+    display: flex;
+    justify-content: flex-end;  /* Alinha o conteúdo à direita */
+    align-items: center;  /* Alinha o conteúdo verticalmente */
+    height: 100vh;  /* Altura da tela inteira */
+    margin: 0;
+    width: 100%;  /* Garantir que ocupe toda a largura da tela */
+    background-image: url('img/banner_bike1.jpg');  /* Caminho para a imagem de fundo */
+    background-size: cover;  /* A imagem cobre toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+}
+
+/* Filtro cinza sobre a imagem de fundo */
+.inicio::before {
+    content: "";  /* Cria um pseudo-elemento vazio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);  /* Fundo preto semi-transparente */
+    z-index: 1;  /* Coloca o filtro por cima da imagem */
+    filter: grayscale(80%);  /* Aplica o filtro de escala de cinza à imagem */
+}
+
+/* Estilo para o conteúdo (nome e descrição) */
+.inicio-content {
+    text-align: left;  /* Alinha o texto à esquerda */
+    padding: 20px;
+    max-width: 600px;  /* Limita a largura do conteúdo */
+    z-index: 2;  /* Garante que o conteúdo fique acima do filtro */
+    margin-right: 40px;  /* Deixa um espaço na margem direita para o conteúdo */
+}
+
+/* Estilo do título (nome do site) */
+.inicio h1 {
+    font-size: 4rem;  /* Tamanho grande do título */
+    margin: 0;
+}
+
+/* Estilo do parágrafo (descrição) */
+.inicio p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+/* Estilo para a imagem de entregas */
+img[alt="entregas"] {
+    width: 100%;    /* Faz a imagem ocupar toda a largura da tela */
+    height: auto;   /* Mantém a proporção original da imagem */
+    display: block; /* Garante que a imagem ocupe toda a linha sem espaços extras */
+    margin: 0;      /* Remove qualquer margem adicional */
+    padding: 0;     /* Remove qualquer padding adicional */
+    object-fit: cover; /* Caso a imagem tenha proporções diferentes, ajusta para cobrir o espaço */
+}
+
+
+/* Estilo para o título com a fonte Roboto Mono */
+.subditulos {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+    color: #162d47;
+}
+
+/* Estilo para o contêiner das imagens de produtos */
+.propaganda {
+    display: flex;          /* Usamos flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre os produtos */
+    flex-wrap: wrap;        /* Permite que os produtos quebrem a linha se necessário */
+    gap: 20px;              /* Espaço entre os produtos */
+    padding: 20px;          /* Espaçamento dentro da propaganda */
+}
+
+/* Estilo para cada produto (imagem + preço) */
+.produto {
+    text-align: center;     /* Alinha o texto (preço) ao centro */
+    width: 22%;             /* Faz com que cada produto ocupe 22% da largura do contêiner */
+    box-sizing: border-box; /* Inclui o padding na largura do produto */
+}
+
+/* Estilo para as imagens dos produtos */
+.produto img {
+    width: 100%;            /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto;           /* Mantém a proporção da imagem */
+    border-radius: 8px;     /* Bordas arredondadas nas imagens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.produto img:hover {
+    transform: scale(1.05); /* Aumenta a imagem um pouco ao passar o mouse */
+}
+
+/* Estilo para o preço */
+.preco {
+    font-size: 1.2rem;       /* Tamanho da fonte */
+    color: #333;             /* Cor do preço */
+    margin-top: 10px;        /* Espaço entre a imagem e o preço */
+    font-weight: bold;       /* Deixa o preço em negrito */
+}
+
+/* Estilo para a seção dos patrocinadores */
+.patrocinadores {
+    background-color: #162d47;  /* Cor de fundo dos patrocinadores */
+    color: #fff;                /* Cor do texto (título) */
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 20px;         /* Espaçamento dentro da seção */
+    text-align: center;         /* Centraliza o título */
+}
+
+/* Estilo para o título da seção */
+.patrocinadores h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;  /* Espaçamento entre o título e as logos */
+}
+
+/* Estilo para as logos dos patrocinadores */
+.logos {
+    display: flex;             /* Flexbox para alinhar as logos */
+    justify-content: center;   /* Centraliza as logos */
+    gap: 30px;                 /* Espaçamento entre as logos */
+    flex-wrap: wrap;           /* Permite que as logos quebrem a linha em telas menores */
+}
+
+/* Estilo para cada logo */
+.logos img {
+    width: 250px;              /* Largura fixa para cada logo */
+    height: auto;              /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease-in-out; /* Efeito suave de zoom */
+}
+
+/* Efeito ao passar o mouse sobre as logos */
+.logos img:hover {
+    transform: scale(1.1);  /* Aumenta a logo ao passar o mouse */
+}
+
+/* Estilo para a seção de clientes */
+.clientes {
+    background-color: #f4f4f4;  /* Cor de fundo leve para a seção */
+    padding: 40px 20px;         /* Espaçamento interno */
+    text-align: center;         /* Centraliza o título */
+}
+
+/* Estilo para o título da seção */
+.clientes h2 {
+    font-size: 30px;
+    margin-bottom: 30px;  /* Espaçamento entre o título e os cards */
+    color: #162d47;                /* Cor do texto (título) */
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+/* Estilo para o container que contém os clientes */
+.clientes-container {
+    display: flex;
+    justify-content: space-around;  /* Espaça as colunas igualmente */
+    gap: 20px;                     /* Espaçamento entre as colunas */
+    flex-wrap: wrap;               /* Permite que os itens quebrem linha em telas menores */
+}
+
+/* Estilo para cada cliente */
+.cliente {
+    background-color: #fff;       /* Fundo branco para o card do cliente */
+    padding: 20px;                 /* Espaçamento dentro de cada card */
+    width: 250px;                 /* Largura fixa para cada card */
+    border-radius: 8px;           /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave ao redor do card */
+    text-align: center;           /* Alinha o conteúdo dentro do card */
+    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.cliente:hover {
+    transform: translateY(-10px);  /* Move o card um pouco para cima */
+}
+
+/* Estilo para a imagem do cliente */
+.cliente img {
+    width: 100%;              /* A imagem ocupa toda a largura do card */
+    height: 200px;            /* Define a altura das imagens */
+    object-fit: cover;        /* Faz com que a imagem cubra a área sem distorcer */
+    border-radius: 40%;       /* Torna a imagem redonda */
+    margin-bottom: 15px;      /* Espaçamento abaixo da imagem */
+}
+
+/* Estilo para o comentário do cliente */
+.comentario {
+    font-size: 1rem;
+    color: #333;              /* Cor do texto */
+    font-style: italic;       /* Deixa o texto em itálico */
+    margin-bottom: 10px;      /* Espaço entre o comentário e o nome do cliente */
+}
+
+/* Estilo para o nome do cliente */
+.nome {
+    font-size: 1.2rem;
+    font-weight: bold;        /* Deixa o nome do cliente em negrito */
+    color: #162d47;           /* Cor do texto do nome */
+}
+
+/* Estilo para a seção de compra */
+.comprar {
+    background-color: #162d47;  /* Cor de fundo para a seção, pode mudar para qualquer cor */
+    padding: 40px 20px;         /* Espaçamento interno */
+    color: #fff;                /* Cor do texto branca */
+}
+
+/* Estilo para o container do conteúdo */
+.comprar-content {
+    display: flex;
+    justify-content: space-between; /* Espaça o texto e o formulário */
+    gap: 40px;                     /* Espaçamento entre o texto e o formulário */
+    flex-wrap: wrap;               /* Permite que os itens quebrem linha em telas menores */
+}
+
+/* Estilo para o texto explicativo */
+.texto {
+    flex: 1;  /* A coluna de texto ocupa o máximo de espaço possível */
+    max-width: 50%;  /* Limita a largura da coluna de texto */
+    padding: 20px;
+}
+
+/* Estilo para o título do texto */
+.texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;  /* Espaçamento abaixo do título */
+}
+
+/* Estilo para o conteúdo do texto */
+.texto p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Estilo para o formulário */
+.formulario {
+    flex: 1;  /* A coluna do formulário ocupa o máximo de espaço possível */
+    max-width: 40%;  /* Limita a largura da coluna de formulário */
+    background-color: #fff; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 8px;  /* Bordas arredondadas para o formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o título do formulário */
+.formulario h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #162d47;  /* Cor do título do formulário */
+}
+
+/* Estilo para os campos do formulário */
+.formulario label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #162d47;  /* Cor das labels */
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Estilo do botão de envio */
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    background-color: #162d47; /* Cor do botão */
+    color: #fff;  /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.formulario button:hover {
+    background-color: #0f1e2c; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para a seção separadora */
+.separator {
+    width: 100%;  /* A seção vai ocupar toda a largura */
+    height: 300px;  /* Altura definida para a seção */
+    background-image: url('img/banner_bike2.jpg');  /* Caminho para a imagem de fundo */
+    background-size: cover;  /* A imagem vai cobrir toda a área */
+    background-position: center;  /* Centraliza a imagem */
+    display: flex;  /* Flexbox para centralizar o conteúdo */
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center;  /* Centraliza o conteúdo verticalmente */
+    color: white;  /* Cor do texto */
+    text-align: center;  /* Alinha o texto ao centro */
+    position: relative;  /* Garantir que a imagem de fundo e o texto fiquem em camadas adequadas */
+}
+
+/* Aumentar o contraste da imagem com o fundo escurecido */
+.separator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Aumentei a opacidade para um fundo mais escuro */
+    z-index: 1;
+}
+
+/* Estilo do título (melhorando a visibilidade) */
+.separator-content h2 {
+    font-size: 3.5rem;  /* Aumentei o tamanho da fonte para mais destaque */
+    font-weight: bold;
+    margin-bottom: 15px;  /* Espaço maior entre o título e o texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  /* Sombra no texto para aumentar contraste */
+}
+
+/* Estilo do parágrafo (melhorando a visibilidade) */
+.separator-content p {
+    font-size: 1.8rem;  /* Aumentei o tamanho do texto */
+    font-weight: lighter;
+    max-width: 800px;  /* Limita a largura do parágrafo */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);  /* Sombra sutil no texto */
+}
+
+/* Certifique-se de que o texto da seção tenha boa legibilidade */
+.separator-content {
+    z-index: 2;  /* Coloca o conteúdo acima do fundo escurecido */
+}
+
+
+
+/* Estilo geral do rodapé */
+footer {
+    background-color: #162d47;  /* Cor de fundo escura, igual aos outros elementos */
+    color: #fff;                /* Cor do texto em branco */
+    padding: 40px 20px;         /* Espaçamento interno do rodapé */
+    font-family: 'Roboto Mono', monospace;  /* Fonte usada */
+}
+
+/* Conteúdo do rodapé */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos no rodapé */
+    gap: 40px;
+    flex-wrap: wrap;  /* Permite que os itens quebrem linha se necessário */
+}
+
+/* Estilo para os links do rodapé */
+.footer-links {
+    flex: 1;
+    min-width: 200px;  /* Evita que os links fiquem muito pequenos */
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;  /* Remove as bolinhas dos itens da lista */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00aaff;  /* Altera a cor dos links quando passar o mouse */
+}
+
+/* Estilo para a seção de atendimento */
+.footer-atendimento {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-atendimento h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-atendimento p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Estilo para as redes sociais */
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);  /* Efeito de aumentar a imagem ao passar o mouse */
+}
+
+/* Estilo para a parte de direitos autorais no final do rodapé */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* Estilo geral para a página sobre */
+.sobre-content {
+    text-align: left;
+    padding: 50px;
+    background-color: #162d47;  /* Azul escuro como fundo */
+    color: #fff;  /* Cor das letras em branco */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;  /* Cor das letras em branco */
+    font-family: 'Roboto', sans-serif;
+}
+
+.sobre-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;  /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    color: #fff;  /* Cor das letras em branco */
+    max-width: 800px;
+    margin: 20px auto;  /* Centraliza e adiciona espaçamento entre os parágrafos */
+    padding: 0 20px; /* Adiciona um pequeno preenchimento lateral */
+    text-align: justify; /* Justifica o texto para uma aparência mais limpa */
+}
+
+/* Estilo do briefing */
+.briefing {
+    padding: 40px 20px;
+    background-color: #00aaff; /* Azul claro como fundo */
+    color: #fff;  /* Cor das letras em branco */
+}
+
+.briefing h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.briefing-details h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #fff;  /* Cor das letras em branco */
+}
+
+.briefing-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #fff;  /* Cor das letras em branco */
+    padding-left: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #162d47; /* Azul escuro como fundo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Linha divisória */
+hr.divider {
+    border: 0;
+    border-top: 1px solid #fff; /* Cor branca para a linha divisória */
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Estilo para o link de briefing */
+.btn-link {
+    color: #00aaff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #00aaff;
+    color: white;
+}
+
+/* Subtítulo da página produtos */
+.titulo-produtos {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+    color: #162d47;
+}
+
+.descricao-produtos {
+    font-size: 18px;
+    color: #757575; /* Cor mais suave para o texto */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centraliza e adiciona margem inferior */
+    line-height: 1.6;
+}
+
+/* Estilo da Tabela de Produtos */
+.produtos-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.produtos-tabela th,
+.produtos-tabela td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.produtos-tabela th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Cores de fundo alternadas nas linhas */
+.linha-1, .linha-5, .linha-9, .linha-13 {
+    background-color: #f2f2f2;
+}
+
+.linha-2, .linha-6, .linha-10, .linha-14 {
+    background-color: #e0e0e0;
+}
+
+.linha-3, .linha-7, .linha-11, .linha-15 {
+    background-color: #d3d3d3;
+}
+
+.linha-4, .linha-8, .linha-12 {
+    background-color: #c0c0c0;
+}
+
+/* Mesclagem de colunas */
+.produtos-tabela td[rowspan] {
+    background-color: #d9eaf7;
+}
+
+/* Estilo para links */
+.produtos-tabela a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.produtos-tabela a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para links adicionais */
+.links-produtos {
+    margin-top: 20px;
+}
+
+.links-produtos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.links-produtos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links-produtos ul li {
+    margin: 5px 0;
+}
+
+.links-produtos ul li a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.links-produtos ul li a:hover {
+    text-decoration: underline;
+}
+
+/* BLOG */
+
+/* Estilo para as seções numeradas do blog */
+.blog {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+/* Estilo para o título de cada seção numerada */
+.blog h2 {
+    color: #162d47;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo para o parágrafo dentro de cada seção */
+.section-p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Estilizando as imagens dentro da galeria */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coluna {
+    width: 30%;
+    padding: 10px;
+}
+
+.coluna a {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.coluna img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.coluna img:hover {
+    transform: scale(1.05);
+}
+
+.titulo-pecas{
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.p-pecas {
+    text-align: center;
+    color: #34495e;
+    font-size: 1.2rem;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+/* Estilo para a página de contato */
+
+/* Seção de Contato */
+.contato {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contato h1 {
+    text-align: center;
+    color: #162d47;
+}
+
+.contato p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #34495e;
+    margin: 10px 0 20px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #162d47;
+}
+
+.campo input, .campo textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo button {
+    padding: 10px;
+    background-color: #162d47;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.campo button:hover {
+    background-color: #34495e;
+}
+
+/* Informações de Contato */
+.informacoes {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.informacoes h2 {
+    color: #162d47;
+    font-size: 1.5rem;
+}
+
+.informacoes p {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #162d47;
+    color: white;
+    margin-top: 40px;
+}
+
+footer .divider {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-left: 10%;
+}
